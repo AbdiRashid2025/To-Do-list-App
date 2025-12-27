@@ -3,17 +3,20 @@ const listContainer =document.getElementById("list-container")
 
 function addTask(){
     if (inputBox.value === "") {
-        alert("you must write something!")
+        error.innerHTML = "you must write something!"
+        error.style.color ="red"
     }else{
-        let li = document.createElement("li")
+        error.innerHTML = "";
+       let li = document.createElement("li")
         li.innerHTML =inputBox.value
         listContainer.appendChild(li)
         let span = document.createElement("span")
         span.innerHTML = "\u00d7"
-        li.appendChild(span)
-    }
+        li.appendChild(span);
     inputBox.value = ""
     saveData();
+    }
+
 }
 
 listContainer.addEventListener("click",function(e){
