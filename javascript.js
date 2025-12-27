@@ -27,21 +27,9 @@ listContainer.addEventListener("click",function(e){
 },false)
 
 function saveData(){
-    localStorage.setItem("data",listContainer.innerHTML);
+    localStorage.setItem("data",listContainer.innerHTML)
 }
 
 function showTask(){
-    // listContainer.innerHTML =localStorage.getItem("data")
-    listContainer.innerHTML = localStorage.getItem("data") || "";
-
+    listContainer.innerHTML =localStorage.getItem("data")
 }
-// function showTask(){
-//     let data = localStorage.getItem("data");
-//     if (data) {
-//         listContainer.innerHTML = data;
-//     } else {
-//         listContainer.innerHTML = "";
-//     }
-// }
-
-showTask();
