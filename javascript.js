@@ -6,7 +6,7 @@ function addTask(){
         error.innerHTML = "you must write something!"
         error.style.color ="red"
     }else{
-        error.innerHTML = "";
+       error.innerHTML = "";
        let li = document.createElement("li")
         li.innerHTML =inputBox.value
         listContainer.appendChild(li)
@@ -36,3 +36,6 @@ function saveData(){
 function showTask(){
     listContainer.innerHTML =localStorage.getItem("data")
 }
+//   let error = document.createElement("p")
+//         error.innerHTML = "you must write something!"
+//         console.log(error)
